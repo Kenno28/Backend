@@ -1,0 +1,3 @@
+info: Start MongoMemoryServer
+info: Connect to mongod at ${mongodURI}
+info: Prefill DB with test data, pfleger: Behrens, password 123_abc_ABC

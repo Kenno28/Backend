@@ -24,7 +24,7 @@ app.use('/api/pfleger', pflegerRouter);
 app.use('/api/eintrag', eintragRouter);
 // TODO: Registrieren Sie hier die weiteren Router:
 
-const _dirname = path._dirname("");
+const _dirname = path.dirname("");
 const buildPat = path.join(_dirname, "../client/build");
 
 app.use(express.static(buildPat))
