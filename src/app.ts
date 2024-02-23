@@ -10,7 +10,7 @@ import cors from 'cors';
 import { configureCORS } from './configCORS';
 
 const app = express();
-const path = require('path');
+
 
 // Middleware:
 configureCORS(app);
@@ -24,20 +24,9 @@ app.use('/api/pfleger', pflegerRouter);
 app.use('/api/eintrag', eintragRouter);
 // TODO: Registrieren Sie hier die weiteren Router:
 
-const _dirname = path.dirname("");
-const buildPat = path.join(_dirname, "../client/build");
 
-app.use(express.static(buildPat))
 
-app.get("/*", function(req,res){
-    res.sendFile(
-        path.join(_dirname, "../client/build/index.html"),
-        function(err){
-            if(err){
-                res.status(500).send(err);
-            }
-        }
-    )
-})
+
+
 
 export default app;
